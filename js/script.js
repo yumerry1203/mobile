@@ -12,6 +12,53 @@
     });
     /* //swiper */
 
+    let funcObj={
+      f_0:function(){
+        const tl = gsap.timeline();
+        tl.to("#menu > *", {
+          opacity: 1,
+          stagger: 0.3,
+          y: -30,
+        });
+        tl.to("#menu .menu_list li", {
+          opacity: 1,
+          stagger: 0.3,
+        });
+      },
+      f_1:function(){
+        const t1 = gsap.timeline();
+        t1.to("#event > *", {
+          opacity: 1,
+          stagger: 0.3,
+          y: -30,
+        })
+      },
+      f_3:function(){
+        const t1 = gsap.timeline();
+        t1.to("#link .link_box > div", {
+          opacity: 1,
+          stagger: 0.3,
+        })
+      }
+    }
+
+    let section = document.querySelectorAll('section');
+    window.addEventListener('scroll', function(){
+    
+      let scroll = document.scrollingElement.scrollTop;
+      let outHeight = this.window.outerHeight; 
+
+      for(let i =0; i<section.length;i++){
+        //스크롤이 되었을때 섹션이 뷰포트에 들어왔으면 그때 섹션함수를 실행함
+        if(scroll > section[i].offsetTop - outHeight &&
+          scroll < section[i].offsetTop - outHeight + section[i].offsetHeight){
+            funcObj['f_'+i]();
+            console.log(i);
+        }
+      };
+    
+    });
+
 
     $(document).ready(function(){
 
