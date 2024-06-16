@@ -129,7 +129,7 @@ header.scroll .logo a{
 
 /* (자주 찾는 메뉴) ============================================= */
 #menu{
-  padding:2rem 0;
+  padding:5rem 0 2rem 0;
 }
 #menu h2{padding-left:2rem;}
 .menu_list{
@@ -152,6 +152,7 @@ header.scroll .logo a{
   background-color: #f5f5f5;
   border-radius: 1.8rem;
   box-shadow:0 0 0.5rem rgba(0, 0, 0, 0.3);
+  opacity: 0;
 }
 .menu_list li a{
   display: flex;
@@ -173,12 +174,13 @@ header.scroll .logo a{
 
 /* (진행중인 이벤트) ============================================= */
 #event{
+  padding-top:8rem;
   background-color: #f5f5f5;
 }
 #event .swiper {
   width: 24rem;
   height: 320px;
-  margin:2.5rem auto;
+  margin:4rem auto;
 }
 
 #event .swiper-slide {
@@ -263,6 +265,7 @@ header.scroll .logo a{
   background-color: #fff;
   box-shadow:0 0 1rem rgba(0, 0, 0, 0.3);
   border-radius:2rem;
+  opacity: 0;
 }
 .link_box div img{
   width: 70%;
@@ -284,4 +287,6 @@ footer{
 
 footer .grey_txt{
   margin-top: 1.5rem;
+  font-size: 1.2rem;
+  color:#666;
 }
